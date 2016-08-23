@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+		xmlns:android   = "http://schemas.android.com/apk/res/android"
+        id          = "com.inaga.inaruta"
+        versionCode = "10" 
+        version     = "1.0.0" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>INARUTA</name>
+
+    <description>
+        Pruebas Visores cartograficos 
+    </description>
+
+    <author href="www.aragon.es/inaga" email="informatica.inaga@aragon.es">
+        INAGA.AREA IV 
+    </author>
+	<platform name="ios">
+	   <icon src="img/iconoMapa.png" width="180" height="180" />
+	</platform>
+	<platform name="android">
+	      <icon src="img/iconoMapa.png" width="180" height="180" />
+    </platform>
+	<platform name="winphone">
+	     <icon src="img/iconoMapa.png" width="180" height="180" />
+	</platform>
+
+<feature name="http://api.phonegap.com/1.0/geolocation" />
+<feature name="http://api.phonegap.com/1.0/file" />
+<feature name="http://api.phonegap.com/1.0/device" />
+<feature name="http://api.phonegap.com/1.0/network" />
+<plugin name="my.org.apache.cordova.file" spec="1.3.0" source="pgb" />
+<preference name="AndroidPersistentFileLocation" value="Internal" />
+<preference name="iosPersistentFileLocation" value="Library" />
+<preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
+<preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,root" />
+<plugin name="com.jmi2.cordova.geolocation" spec="0.3.15" source="pgb" />
+<plugin name="cordova-plugin-whitelist" />
+<allow-navigation href="*" />
+<allow-intent href="*" />
+<access origin="*" />
+</widget>

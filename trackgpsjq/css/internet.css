@@ -1,0 +1,120 @@
+/* CSS Document */
+
+/* 
+	Para desarrollo de portalEmpleado hay que  reemplazar: ../img/ 	por http://middesa.aragon.es/img/
+	Para produccion de portalEmplado hay que reemplazar: ../img/   	por http://portalempleado.aragon.es/img/
+	
+	Para produccion de portalInternet:portal1.dga.es hay que reemplazar: ../img/   	por http://portal1.dga.es/img/
+	Para desarrollo de portalInternet:portal1014 hay que reemplazar: ../img/   	por http://portal1014.dga.es/img/
+	
+	Para produccion de portalInternet:alba hay que  reemplazar: ../img/ por http://alba.aragon.es/img/
+*/
+
+*{	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9pt; }
+/*input:focus, select:focus.frmValorCampo, textarea:focus  {background-color: #EEF1F5; color: inherit; } */
+
+/* --------------------------- Sobreescritos estilos de html por aplicacion ------------------------- */
+a:link{ color: #1E3F71; background: inherit;} 
+a:visited {background: inherit; color:#551A8B; text-decoration:none; } 
+/*a:visited:hover {text-decoration:underline; }
+a:hover {text-decoration:underline; }*/
+/* --------------------------- Fin Sobreescritos estilos de html por aplicacion ------------------------- */
+
+/* --------------------------- Sobreescritos los estilos por defecto de los formularios------------------ */
+.frmCabeceraFormulario {color:#1E3F71;font-weight: bold; background:inherit;}
+/* --------------------------- Fin sobreescritos los estilos por defecto de los formularios------------------ */
+
+
+/* --------------------------------- Estilos con el color por aplicacion -------------------------------------------------*/
+/* Cabecera*/
+h1{ color: #1E3F71;  background: inherit; }  
+li { list-style: none; list-style-image: url(/img/estilos/vinieta.gif);} 
+
+/* Boton*/
+.boton {  border-left:1px solid #EEF1F5; border-right:1px solid #EEF1F5; border-top:1px solid #1E3F71; border-bottom:1px solid #1E3F71; background-color: #EEF1F5; font-weight: bold; text-align: center; color: #000000; } 
+.botonBlanco {  border-left:1px solid #EEF1F5; border-right:1px solid #EEF1F5; border-top:1px solid #1E3F71; border-bottom:1px solid #1E3F71; background-color: #ffffff; font-weight: bold; text-align: center; color: #000000; } 
+
+/* Enlaces marrones, que heredan el color de la celda o campo donde se situen */
+a.enlaceApl1 {color:#1E3F71;background:inherit;}
+/*a.enlaceApl1:visited {color:#A6643C;background:inherit; text-decoration:none;} */
+a.enlaceApl1:visited:hover {text-decoration:underline; }
+a.enlaceApl1:hover {text-decoration:underline; }
+
+/* ------------------- Inicio estilos para menus ------------------- */
+ul.menuSup{ background: #F2F2F2; color: #1E3F71; border-bottom:1px solid #1E3F71; border-top:1px solid #1E3F71; } 
+li.menuSupActivo a, li.menuSupInactivo a{ color:#1E3F71; background:inherit; }    
+
+li.menu1Activo a, li.nivel2Activo a,  li.nivel3Activo a, li.nivel4Activo a, li.nivel1_800Activo a, li.nivel2_800Activo a{ color: #1E3F71; background: inherit;}  
+/*li.menu1Activo a:visited, li.nivel2Activo a:visited {background: inherit; color:#A6643C; }*/
+li.menu1Inactivo a, li.nivel2Inactivo a,  li.nivel3Inactivo a, li.nivel4Inactivo a, li.nivel2_800Inactivo a{ color: #1E3F71; background: inherit;}  
+/*li.menu1Inactivo a:visited, li.nivel2Inactivo a:visited, li.nivel3Inactivo a:visited, li.nivel4Inactivo a:visited, li.nivel2_800Inactivo a:visited   {background: inherit; color:#A6643C; }*/
+
+
+li.menu1Activo a, li.nivel2Activo a{ background:#EEF1F5;  color:inherit;} 
+li.menu1Activo {list-style-image: url(/img/estilos/navInternet_vinieta.gif); background:#EEF1F5;  color:#1E3F71; } 
+li.menu1Inactivo {list-style-image: url(/img/estilos/navInternet_vinieta.gif); background:inherit;  color:#1E3F71; }
+
+.nivel1, .nivel1 a{background:#1E3F71; color:#ffffff;}
+
+li.nivel2Activo {list-style-image: url(/img/estilos/navInternet_vinieta.gif); background:#EEF1F5;  color:#1E3F71; }
+li.nivel2Inactivo {list-style-image: url(/img/estilos/navInternet_vinieta.gif); background:inherit;  color:#1E3F71; }
+
+ul.nivel3{ border-bottom: 2px solid #1E3F71; } 
+li.nivel3Activo { border: 2px solid #1E3F71; border-bottom:2px solid #ffffff; color: #1E3F71; background:inherit; } 
+li.nivel3Inactivo  { border: 1px solid #1E3F71; background: #EEF1F5; color: #1E3F71; } 
+
+ul.nivel4{ color: #1E3F71; background: #F0F0F0; } 
+li.nivel4Activo { color: #1E3F71; background: inherit; }   
+li.nivel4Inactivo { color: #1E3F71; background: inherit; } 
+
+.datosEnmarcados{ border: 2px solid #1E3F71; border-top:0px; }
+
+ul.nivel1_800{ border-bottom:2px solid #1E3F71; border-top:2px solid #1E3F71; background:#2C5885; color:#1E3F71; }
+li.nivel1_800Activo{ border-left: 2px solid #1E3F71; border-right: 2px solid #1E3F71; border-top: 2px solid #1E3F71; color:#1E3F71; }
+li.nivel1_800Inactivo a,li.nivel1_800Inactivo a:visited,li.nivel1_800Inactivo { color:#ffffff; } 
+
+ul.nivel2_800{ color: #1E3F71;  border-bottom: 2px solid #1E3F71; } 
+
+/* ------------------- Fin estilos para menus ------------------- */
+
+/* Elemento para texto marron, el mas oscuro */
+.textoApl1{background: inherit;  color: #1E3F71;}
+/* Elemento para texto marron, el siguiente mas claro */
+.textoApl2{background: inherit;  color: #2C5885;} 
+/* Elemento para texto marron, el siguiente mas claro */
+.textoApl3{background: inherit;  color: #EEF1F5;}
+
+/* Elemento para fondo marron, el mas oscuro */
+.fondoApl1,.fondoApl1 a:link,.fondoApl1 a:visited,a:link.fondoApl1, a:visited.fondoApl1{background-color: #1E3F71;  color: #FFFFFF;}
+/* Elemento para fondo marron, el siguiente mas oscuro */
+.fondoApl2,.fondoApl2 a:link, .fondoApl2 a:visited,a:link.fondoApl2,a:visited.fondoApl2{ background-color: #2C5885;color: #FFFFFF;}
+/* Elemento para fondo marron, el siguiente mas oscuro  */
+.fondoApl3 {background-color: #EEF1F5;color: #000000;} 
+
+/* Elemento que simula el borde del color mas oscuro*/
+.borde1SolidoApl1{	border: 1px solid #1E3F71; }
+/* Elemento que simula el borde del color siguiente mas claro*/
+.borde1SolidoApl2{	border: 1px solid #2C5885; }
+
+/* Subrayado de un pixel del color mas oscuro */
+.subrayado1SolidoApl1{ border-bottom:1px solid #1E3F71; }
+/* Subrayado de un pixel del color siguiente mas claro */
+.subrayado1SolidoApl2{ border-bottom:1px solid #2C5885; }
+
+/* --------------------------------- Fin estilos con el color por aplicacion -------------------------------------------------*/
+
+/*========================================*/
+/* Definición de la cabecera de la página */
+/*========================================*/
+.cabeceraLogo{background: #1E3F71 url('https://servicios.aragon.es/img/estilos/logoInternet.jpg') no-repeat 0px 0px; color: inherit; } 
+.cabeceraLogo h1 {background: #1E3F71 none no-repeat 0px 0px; color:#FFFFFF; }   
+
+
+/*=============================================================*/
+/* Definición de los logos de la dga en los distintos fondos de la apl */
+/*============================================================*/
+
+.logoApl1{ background-image: url(/img/estilos/logoInternetFondoApl1.gif); }
+.logoApl2{ background-image: url(/img/estilos/logoInternetFondoApl2.gif); }
+.logoApl3{ background-image: url(/img/estilos/logoInternetFondoApl3.gif); }
+

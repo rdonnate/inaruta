@@ -1,0 +1,229 @@
+/* 
+    Document   : mapa
+    Created on : 24-abr-2015, 9:46:05
+    Author     : PORTATIL
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+#myPanel {
+  width:23em;
+  background-color: #e6f2ff;
+  opacity:0.8;
+ 
+ }
+.ui-content {
+    position: absolute;
+    top: 43px;
+    right: 0;
+    bottom: 0px;
+    left: 0;
+    padding: 0 !important;
+	
+}  
+.ui-icon-download:after{
+background-image: url("../img/download.png");
+background-size: 16px 16px;
+}
+.ui-icon-trash:after{
+background-image: url("../img/trash-o.png");
+background-size: 16px 16px;
+}
+.ui-icon-save:after{
+background-image: url("../img/save.png");
+background-size: 16px 16px;
+}
+.ui-icon-upload:after{
+background-image: url("../img/upload.png");
+background-size: 16px 16px;
+}
+
+.ui-icon-satelite:after{
+background-image: url("../img/satelite.png");
+background-size: 18px 18px;
+
+}
+.ui-icon-stop:after {
+background-image: url("../img/stop.png");
+background-size: 18px 18px;
+
+}
+
+.ui-icon-andando:after {
+background-image: url("../img/andando.jpg");
+background-size: 18px 18px;
+
+}
+
+.ui-icon-localizacion:after {
+background-image: url("../img/ico_localizacion.png");
+background-size: 18px 18px;
+}
+	
+
+
+.cargando {
+   text-decoration: none;
+ }
+ #modal {
+    position: relative; 
+    color: #000000; display:none;
+	background-color: #e6f2ff;
+	opacity:0.7;
+
+	}
+.modal {
+ position: fixed; 
+ width: 150px; 
+ height: 50px; 
+ top: 0; 
+ left: 0; 
+ font-family:Verdana, Arial, Helvetica, sans-serif; 
+ font-size: 12px; font-weight: bold;
+ border: #333333 3px solid;
+ background-color: #e6f2ff;
+ opacity:0.7;
+ color: #000000; display:none;
+  /* -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera 
+    animation: mymove 5s infinite; */
+ }
+ 
+ /* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    50% {opacity: 0;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    50% {opacity: 0;}
+}
+ 
+ 
+.float_center {
+  float: right;
+
+  position: relative;
+  left: -50%; /* or right 50% */
+  text-align: left;
+}
+.float_center > .child {
+  position: relative;
+  left: 50%;
+}
+
+.ajuste {
+    	float:right;
+}
+.ajusteIZ{
+    	float:left;
+}
+.yscroll {
+      height:350px;
+	  overflow:auto;
+      
+}
+.info {
+
+  padding: 2px;
+  font-weight: bold;
+  color: #000000;
+  background-color: #e6f2ff;
+  opacity:0.7;
+  float:right;
+ 
+ }
+
+.mapa {
+  width:97%;
+  height: 95%;
+  margin:1%;
+  border:1px solid #013253;
+  font-family: verdana,helvetica,arial,sans-serif;
+  font-size:90%;
+ }
+.legend {
+    color:#013253;
+    font-family: verdana,helvetica,arial,sans-serif;
+    font-size:100%;
+    font-weight: bold;
+}
+.imgbotones { margin-left:10px; }
+.saltolinea {
+     margin-bottom: 50px;
+}
+.fieldsetBotones{
+  float: left;
+  margin:1%;
+  border:1px solid #013253;
+  font-family: verdana,helvetica,arial,sans-serif;
+  font-size:90%;
+ }			
+.fieldset {
+  width:73%;
+  margin:1%;
+  border:1px solid #013253;
+  font-family: verdana,helvetica,arial,sans-serif;
+  font-size:90%;
+ }
+.botones {
+    float : right;
+}
+#coordenadas {
+  width:20%;
+  margin:1%;
+  border:1px solid #013253;
+  font-family: verdana,helvetica,arial,sans-serif;
+  font-size:90%;
+ }
+#presentacion {
+background-color:#013253;
+color:white;
+font-weight: bold;
+clear:both;
+text-align:center;
+padding:1px; 
+}	
+.ancho60{
+	width: 60%;
+}
+#footer {
+background-color:#013253;
+color:white;
+font-weight: bold;
+clear:both;
+text-align:center;
+padding:1px; 
+}	
+#logodga{
+width: 40%;
+	}
+#logoinaga2{
+width: 31%;
+	}
+#logoinaga {
+width: 40%;
+}
+th {
+ color: #000000;
+ font-weight: bold;
+}
+table {
+   float:left;
+}
+
+table, th, td {
+   border: 1px solid black;
+   border-collapse: collapse;
+   padding: 5px;
+   text-align:center;
+   padding: 3px;
+  }
+
+#map { height: 98%; }
+#pnlInstructions { margin-left: 50px; margin-right: 10px; 	margin-top: 15px ;background-color: #fff; padding: 10px; opacity:0.7;}
+#pnlInstructions h2 { margin: 0; font-weight: bold;}
+

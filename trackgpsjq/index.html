@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>trackgps</title>
+	 
+	<meta charset="ISO-8859-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+   	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script>
+		$(document).bind('mobileinit',function(){
+			$.mobile.changePage.defaults.changeHash = false;
+			$.mobile.hashListeningEnabled = false;
+			$.mobile.pushStateEnabled = false;
+		});
+	</script>
+	 
+	 <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+
+	 <!-- Load Leaflet from CDN-->
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.0.0-beta.2/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet/v1.0.0-beta.2/leaflet.js"></script>
+
+  <!-- Load Esri Leaflet from CDN -->
+	<script src="http://cdn.jsdelivr.net/leaflet.esri/2.0.0-beta.7/esri-leaflet.js"></script>
+	<script type="text/javascript" src="http://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js"></script> 
+	<link rel="stylesheet" href="http://cdn.jsdelivr.net/leaflet.esri.geocoder/2.0.2/esri-leaflet-geocoder.css">
+	<script src="http://cdn.jsdelivr.net/leaflet.esri.geocoder/2.0.2/esri-leaflet-geocoder.js"></script>
+	 
+	  <link rel="stylesheet" href="http://leaflet.github.io/Leaflet.draw/leaflet.draw.css"/>
+    <script src="http://leaflet.github.io/Leaflet.draw/leaflet.draw.js"></script>
+     <link href='http://fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+     <link rel="stylesheet" media="screen" href="css/styles.css" type="text/css" />
+    <link rel="stylesheet" media="screen" href="css/dga.css" type="text/css"  />
+    <link rel="stylesheet" href="css/mapa.css" type="text/css" />
+	 <link rel="stylesheet" href="css/FeedEk.css" type="text/css" />
+    <script type="text/javascript" src="js/FeedEk.js"></script>
+    <script src='js/sql.js'></script>
+	<script src='js/mapa.js'></script>
+	<script src="cordova.js"></script>    
+   
+    </head>
+  <body>
+	
+	  <span id="error" class="error negrita nuevalinea"></span>  
+	             <div id="botones" data-role="header" data-position="fixed">
+				     <div data-role="controlgroup" data-mini="true" data-type="horizontal">
+				     <input type="button" id="locate" data-icon="satelite" class="ui-btn-right" title="Empezar Track" alt="seguimiento" value="Track"/> 
+					 <input type="button" id="stop" data-icon="stop"  class="ui-btn-right"     title="stoptrack" alt="parar tracking" value="Stop"/> 
+					 <input type="button" id="ruta" data-icon="andando"  class="ui-btn-right"  title="ruta" alt="ruta" value="Ruta"/>
+					<!--  <input type="button" id="viewtrack" class="leaflet-right"  src="img/icono-informacion.png" width="30" height="30"  title="datos ruta"alt="datos ruta"/> 	 -->
+                   </div> 					 
+				 </div>        
+        <div id="main" data-role="main" class="ui-content">        
+			
+                    <div id="map">
+					    <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow leaflet-control ajuste" data-mini="true">Utilidades</a>	
+					</div>
+					<div id="txt">
+					         <a id="exporttxt" href="#">download txt</a> 
+							 <p id="registros"> </p>
+					 </div>
+					<div data-role="panel" id="myPanel" data-display="overlay" data-display="overlay" data-position="right" > 
+					
+					 
+					    <div  data-role="collapsible" data-mini="true" data-iconpos="right" >
+				
+				        
+							<h2>Herramientas Mapa<h2>
+							<div data-role="controlgroup" data-type="vertical" data-mini="true">
+							  
+							
+							  <input type="button" value="Zoon Inicial"  id="zoonini" data-icon="home"  title="Zoom Inicial" alt="zoom inicial"/>
+							  <input type="button" value="Zoom Anterior" id="zoonant" data-icon="arrow-l"  title="Zoom Anterior"alt="zoom anterior"/>
+							  <input type="button" value="Localizaci&oacute;n"  id="posicion" data-icon="location" title="localizacion"alt="Mi posicion"/>  
+							  <input type="button" value="Borrar"  id="clear" data-icon="delete"  title="Limpiar mapa"/>						  
+							
+												 
+							</div>
+						</div>
+					
+					     
+					    <div  data-role="collapsible" data-mini="true" data-iconpos="right" >
+				
+				        
+							<h2>Herramientas Datos<h2>
+							<div data-role="controlgroup" data-type="vertical" data-mini="true">
+							  
+							
+							  <input type="button" value="Guardar Ruta"  id="guardar" data-icon="save"  title="Guardar Ruta" alt="Guardar Rura"/>
+							  <input type="button" value="Recuperar Ruta" id="recuperar" data-icon="upload"  title="Recuperar Ruta" alt="Recuperar Ruta"/>
+							  <input type="button" value="Borrar Ruta"  id="papelera" data-icon="trash" title="Borrar Ruta" alt="Borrar Ruta"/>  
+						      <input type="button" value="Descargar Ruta"  id="download" data-icon="download" title="Descargar Ruta" alt="Descargar Ruta"/>  
+								<!-- <span class="ui-btn ui-icon-upload ui-btn-icon-left ui-corner-all fileinput-button">
+									<span> Cargar Txt </span>
+									<input type="file"   value="Cargar txt" name="texto" id="upload" data-icon="upload" title="upload Ruta" alt="upload Ruta" accept=".txt"/>  
+								</span>	 -->
+							  <fieldset class="ui-field-contain">
+							    <span class="ui-btn ui-icon-upload ui-btn-icon-left ui-corner-all fileinput-button">
+									<label for="upload">Seleccione</label>
+									<select name="ficheros" id="upload" data-native-menu="false" data-mini="true">
+									   <!-- <option value="mon">Monday</option>
+									  <option value="tue">Tuesday</option>
+									  <option value="wed">Wednesday</option>  -->
+									</select>
+								</span>
+							  </fieldset>
+
+								
+							</div>
+						</div> 
+						
+						<div  data-role="collapsible" data-mini="true"  data-iconpos="right" id="resultados">
+								 <h2>Informaci&oacute;n de la ruta	</h2>
+								 <div id="panelinfo" class="yscroll">
+									 <div id="datosruta" class="ajusteIZ"></div>
+								     <div id="info" class="ajusteIZ">datos de la ruta</div>
+								 </div>
+						</div>		
+			
+			
+						
+														
+                    </div>
+					
+					</div> 
+            
+                 
+		</div>		 
+	 <script> 
+		$(function(){  
+		      $.mobile.loading( 'show', { theme: "a", text: "Cargando...", textonly: false,textVisible:true });
+			
+            /*var element = $('#header');
+             var altura = element.height();
+			 element = $('#main');
+			 element.css("top", altura + 2); */
+			 
+		     touchScroll('resultados');
+			 
+			 initMap(); 	
+			 setTimeout(function(){ $.mobile.loading( 'hide'); }, 2000);
+		});  
+	</script>
+ 
+  </body>
+
+
+</html>

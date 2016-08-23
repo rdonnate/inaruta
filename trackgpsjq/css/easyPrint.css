@@ -1,0 +1,14 @@
+
+.leaflet-control-easyPrint a {
+  background:#fff url(../img/print.png) no-repeat 5px;
+  display: block;
+  }
+
+
+
+@media print {
+
+	html {padding: 0px!important;}
+	.leaflet-control-easyPrint-button{display: none!important;}
+
+}

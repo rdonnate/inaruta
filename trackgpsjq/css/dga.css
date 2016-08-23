@@ -1,0 +1,506 @@
+/* 
+    Document   : dga
+    Created on : 26-feb-2012, 0:21:49
+    Author     : PORTATIL
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+/* CSS Document */
+
+/* 
+	Para desarrollo de portalEmpleado hay que  reemplazar: ../ por http://middesa.aragon.es/
+	Para produccion de portalEmplado hay que reemplazar: ../ por http://portalempleado.aragon.es/ 
+	
+	Para produccion de portalInternet hay que  reemplazar: ../img/ por http://portal.aragon.es/images/images_DGA/
+	Para produccion de portalInternet:alba hay que  reemplazar: ../ por http://alba.aragon.es/
+*/
+*{	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9pt;}
+/*input:focus, select:focus.frmValorCampo, textarea:focus  {background-color: #EFF3F7; color: inherit; border: 2px solid #666666; } */
+
+/* El campo input de tipo file no tomaba el estilo general por lo que se ha sobreescrito */
+input[type="file"] {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt;}
+
+/* --------------------------------- Estilos generales a todo el portal -------------------------------------------------*/
+
+/* Elemento centrado */
+.centrado{ text-align:center;}
+/* Elemento alineado izquierda */
+.izquierda{text-align:left;}
+/* Elemento alineado derecha */
+.derecha{text-align:right;}
+/* Elemento justificado */
+.justificado{text-align:justify;}
+/* Elemento para negrita */
+.negrita{font-weight: bold;}
+/* Elemento texto blanco */
+.blanco,.blanco a:link,.blanco a:visited,a:link.blanco,a:visited.blanco{background: inherit; color: #ffffff;}
+/* Elemento fondo blanco */
+.fondoBlanco{background-color: #ffffff; color: inherit;}
+/* Elemento texto negro */
+.negro, .negro a:link, .negro a:visited, a:link.negro, a:visited.negro{background: inherit; color: #000000;}
+/* Elemento texto gris oscuro */
+.gris,.gris a:link,.gris a:visited,a:link.gris,a:visited.gris{background: inherit; color: #666666;}
+/* Elemento para letra mas pequena */
+.pequena1{font-size: 0.9em;}
+.pequena2{font-size: 0.8em;}
+/* Elemento para letra mas grande*/
+.grande1{font-size: 1.2em;}
+.grande2{font-size: 1.4em;}
+/* Elementos mayusculas/minusculas */
+.mayusculas{ text-transform: uppercase }
+.minusculas{ text-transform: lowercase }
+/* Elemento sin borde */
+.sinBorde{border: 0px; }
+/* Elemento sin margen */
+.sinMargen{margin: 0px;}
+/* Elemento para situar bloques contiguos*/
+.inline{display: inline;}
+/* Elemento alto 30px para titulos dentro de la aplicacion ( con imagenes asociadas )*/
+.alto30{height : 30px;}
+/* Elemento alto 36px para titulos dentro de la aplicacion ( con imagenes asociadas )*/
+.alto36{height : 36px;}
+/* Elemento alto 56px para titulos dentro de la aplicacion ( con imagenes asociadas )*/
+.alto56{height : 56px;}
+.alto58{height : 58px;}
+.altocab{height : 10%;}
+/* Elemento que centra verticalmente el texto del titulo anterior */
+.centrado30{line-height:30px;}
+/*Alineacion vertical centrada*/
+.alineaVerticalMiddle{vertical-align: middle;}
+/*Alineacion vertical text-bottom*/
+.alineaVerticalTextBottom{vertical-align: text-bottom;}
+/* Subrayado de un pixel en blanco */
+.subrayado1Blanco, .subrayado1SolidoBlanco{ border-bottom:1px solid #FFFFFF; }
+/* Subrayado de un pixel en negro */
+.subrayado1Negro, .subrayado1SolidoNegro{ border-bottom:1px solid #000000; }
+/* Subrayado de un pixel en gris */
+.subrayado1Gris, .subrayado1SolidoGris{ border-bottom:1px solid #666666; }
+/* Color rojo, util para destacar*/
+.rojo,.rojo a:link,.rojo a:visited,a:link.rojo,a:visited.rojo{color:#FF0000;background: inherit;}
+/* Elemento deshabilitado */
+.deshabilitado{background-color: #EEEEEE; color: inherit;}
+/*Lo que no cabe, no se visualiza*/
+.overflowOculto{ overflow: hidden;}
+/*Lo que no cabe, muestra scroll*/
+.overflowAuto{ overflow: auto; position: relative;}
+/*Oculta un determinado elemento*/
+.elementoOculto{ display: none; }
+/* Utilizado como contenedor de 580px centrado*/
+.contenedor580{ margin: 0 auto; width: 580px; }
+/* Como saber si se utiliza un navegador viejo */
+.oldbrowser { text-align: center;}
+div.oldbrowser{ display: none;	/* hide the standards compliant warning - this isn't a catch all, but works for old browsers */ }
+/* Asigna un primer plano a un elemento */
+.primerPlano {z-index:99;}
+/* Estilo para poner el boton despues del tipo texto de size 47*/
+.desplaza300{left:12em;}
+/*.desplaza300{left:300px;}*/
+/*  Posicionamiento absoluto */
+.posicionaAbsoluto{position:absolute;}
+
+/* --------------------------------- Separadores -------------------------------------------------*/
+
+/* Separador de las celdas*/
+.padding2{	padding:2px;}
+/* Separador de las celdas*/
+.padding3{	padding:3px;}
+/* Espacio de 5px a la derecha antes del elemento a dibujar*/
+.padding5Dch{ padding-right: 5px;}
+/* Espacio de 5px a la izquierda antes del elemento a dibujar*/
+.padding5Izq{ padding-left: 5px;}
+/* Espacio de 5px por arriba antes del elemento a dibujar*/
+.padding5Sup{ padding-top: 5px;}
+/* Espacio de 5px por debajo antes del elemento a dibujar*/
+.padding5Inf{ padding-bottom: 5px;}
+
+/* Espacio de 10px a la derecha antes del elemento a dibujar*/
+.padding10Dch{ padding-right: 10px;}
+/* Espacio de 10px a la izquierda antes del elemento a dibujar*/
+.padding10Izq{ padding-left: 10px;}
+/* Espacio de 10px por arriba antes del elemento a dibujar*/
+.padding10Sup{ padding-top: 10px;}
+/* Espacio de 10px por debajo antes del elemento a dibujar*/
+.padding10Inf{ padding-bottom: 10px;}
+
+/* Espacio de 20px a la derecha antes del elemento a dibujar*/
+.padding20Dch{ padding-right: 20px;}
+/* Espacio de 20px a la izquierda antes del elemento a dibujar*/
+.padding20Izq{ padding-left: 20px;}
+/* Espacio de 20px por arriba antes del elemento a dibujar*/
+.padding20Sup{ padding-top: 20px;}
+/* Espacio de 20px por debajo antes del elemento a dibujar*/
+.padding20Inf{ padding-bottom: 20px;}
+
+/* --------------------------------- Fin separadores -------------------------------------------------*/
+
+
+/* ------------------------------------ Estilos de las simulaciones de tablas  ------------------------------------ */
+
+
+/*Olvida la distribcion de bloques existentes hasta este momento e inicia nueva linea*/
+.nuevaLinea{ clear : both;}
+
+.seemTable{ padding: 2px 0px; width: 100%; clear : both;}
+.seemTr{ padding:5px 0px 0px 0px;  width: 100%; clear : both;}
+
+/* Elemento que simula un td del 1% alineado a la izquierda... */
+.seemTd1AlignIzq{ width : 1%; float : left; color: inherit; background: inherit; }
+.seemTdAlignIzq{ float : left; color: inherit; background: inherit; }
+/* Elemento que simula un td del 99% alineado a la izquierda... */
+.seemTd99AlignIzq{ width : 99%; float : left; color: inherit; background: inherit; }
+/* Elemento que simula un td del 2% alineado a la izquierda... */
+.seemTd2AlignIzq{ width : 2%; float : left; color: inherit; background: inherit; }
+/* Elemento que simula un td del 98% alineado a la izquierda... */
+.seemTd98AlignIzq{ width : 98%; float : left; color: inherit; background: inherit; }
+
+/* Elemento que simula un td alineado a la izquierda... */
+.seemTdAlignIzq{ float : left; color: inherit; background: inherit; }
+/* Elemento que simula un td del 5% alineado a la izquierda... */
+.seemTd5AlignIzq{ width : 5%; float : left; color: inherit; background: inherit; }
+/* Elemento que simula un td del 95% alineado a la izquierda... */
+.seemTd95AlignIzq{ width : 95%; float : left; color: inherit; background: inherit;}
+/* Elemento que simula un td del 10% alineado a la izquierda... */
+.seemTd10AlignIzq{ width : 10%; float : left; color: inherit; background: inherit; }
+/* Elemento que simula un td del 90% alineado a la izquierda... */
+.seemTd90AlignIzq{ width : 90%; float : left; color: inherit; background: inherit; }
+/* Elemento que simula un td del 15% alineado a la izquierda... */
+.seemTd15AlignIzq{ width : 15%; float : left; color: inherit; background: inherit;}
+/* Elemento que simula un td del 85% alineado a la izquierda... */
+.seemTd85AlignIzq{ width : 85%; float : left; color: inherit; background: inherit; }
+/* Elemento que simula un td del 20% alineado a la izquierda... */
+.seemTd20AlignIzq{ width : 20%; float : left; color: inherit; background: inherit; }
+/* Elemento que simula un td del 80% alineado a la izquierda... */
+.seemTd80AlignIzq{ width: 80%; float: left; color: inherit; background: inherit; }
+/* Elemento que simula un td del 25% alineado a la izquierda... */
+.seemTd25AlignIzq{ width : 25%; float : left; color: inherit; background: inherit; }
+/* Elemento que simula un td del 75% alineado a la izquierda... */
+.seemTd75AlignIzq{ width: 75%; float: left; color: inherit; background: inherit; }
+/* Elemento que simula un td del 30% alineado a la izquierda... */
+.seemTd30AlignIzq{ width : 30%; float : left; color: inherit; background: inherit; }
+/* Elemento que simula un td del 70% alineado a la izquierda... */
+.seemTd70AlignIzq{ width: 70%; float: left; color: inherit; background: inherit; }
+/* Elemento que simula un td del 33% alineado a la izquierda... */
+.seemTd33AlignIzq{ width : 33%; float : left; color: inherit; background: inherit; }
+/* Elemento que simula un td del 40% alineado a la izquierda... */
+.seemTd40AlignIzq{ width : 40%; float : left; color: inherit; background: inherit; }
+/* Elemento que simula un td del 60% alineado a la izquierda... */
+.seemTd60AlignIzq{ width: 60%; float: left; color: inherit; background: inherit; }
+.seemTd65AlignIzq{ width: 65%; float: left; color: inherit; background: inherit; }
+/* Elemento que simula un td del 50% alineado a la izquierda... */
+.seemTd50AlignIzq{ width : 50%; float : left; color: inherit; background: inherit; }
+
+/* Elemento que simula un td del 1% alineado a la derecha... */
+.seemTd1AlignDch{ width : 1%; float : right; color: inherit; background: inherit; }
+/* Elemento que simula un td del 99% alineado a la derecha... */
+.seemTd99AlignDch{ width : 99%; float : right; color: inherit; background: inherit; }
+/* Elemento que simula un td del 2% alineado a la izquierda... */
+.seemTd2AlignDch{ width : 2%; float : right; color: inherit; background: inherit; }
+/* Elemento que simula un td del 98% alineado a la izquierda... */
+.seemTd98AlignDch{ width : 98%; float : right; color: inherit; background: inherit; }
+
+/* Elemento que simula un td alineado a la derecha... */
+.seemTdAlignDch{ float: right; color: inherit; background: inherit; }
+/* Elemento que simula un td del 5% alineado a la derecha... */
+.seemTd5AlignDch{ width : 5%; float : right; color: inherit; background: inherit; }
+/* Elemento que simula un td del 95% alineado a la derecha... */
+.seemTd95AlignDch{ width : 95%; float : right; color: inherit; background: inherit; }
+/* Elemento que simula un td del 10% alineado a la derecha... */
+.seemTd10AlignDch{ width : 10%; float : right; color: inherit; background: inherit; }
+/* Elemento que simula un td del 90% alineado a la derecha... */
+.seemTd90AlignDch{ width : 90%; float : right; color: inherit; background: inherit; }
+/* Elemento que simula un td del 15% alineado a la derecha... */
+.seemTd15AlignDch{ width : 15%; float : right; color: inherit; background: inherit; }
+/* Elemento que simula un td del 85% alineado a la derecha... */
+.seemTd85AlignDch{ width : 85%; float : right; color: inherit; background: inherit; }
+/* Elemento que simula un td del 20% alineado a la derecha... */
+.seemTd20AlignDch{ width : 20%; float : right; color: inherit; background: inherit; }
+/* Elemento que simula un td del 80% alineado a la derecha... */
+.seemTd80AlignDch{ width: 80%; float: right; color: inherit; background: inherit; }
+/* Elemento que simula un td del 25% alineado a la derecha... */
+.seemTd25AlignDch{ width : 25%; float : right; color: inherit; background: inherit; }
+/* Elemento que simula un td del 75% alineado a la derecha... */
+.seemTd75AlignDch{ width: 75%; float: right; color: inherit; background: inherit; }
+/* Elemento que simula un td del 30% alineado a la derecha... */
+.seemTd30AlignDch{ width : 30%; float : right; color: inherit; background: inherit; }
+/* Elemento que simula un td del 70% alineado a la derecha... */
+.seemTd70AlignDch{ width: 70%; float: right; color: inherit; background: inherit; }
+/* Elemento que simula un td del 33% alineado a la derecha... */
+.seemTd33AlignDch{ width : 33%; float : right; color: inherit; background: inherit; }
+/* Elemento que simula un td del 40% alineado a la derecha... */
+.seemTd40AlignDch{ width : 40%; float : right; color: inherit; background: inherit; }
+/* Elemento que simula un td del 60% alineado a la derecha... */
+.seemTd60AlignDch{ width: 60%; float: right; color: inherit; background: inherit; }
+.seemTd65AlignDch{ width: 65%; float: right; color: inherit; background: inherit; }
+/* Elemento que simula un td del 50% alineado a la derecha... */
+.seemTd50AlignDch{ width : 50%; float : right;color: inherit; background: inherit; }
+/* ------------------------------------ Fin estilos de las simulaciones de tablas  ------------------------------------ */
+
+/* ------------------------------------ Estilos ayuda a construccion de tablas  ------------------------------------ */
+
+/* Tabla sin borde */
+table.sinEspacio{ border:0px; border-spacing: 0px; border-collapse: collapse; width:100%;}
+
+/* Elemento que simula el borde gris de una celda*/
+.bordeTabla1Solido{
+	border-top: 1px solid #8D8D8D; 
+	border-right: 1px solid #C0C0C0;
+	border-bottom: 1px solid #C0C0C0;
+	border-left: 1px solid #8D8D8D; 
+}
+
+/* Elemento permite alinar las tablas a izq, dch o centrada*/
+.alineaTabla
+{
+	margin-left:auto;
+	margin-right:auto;
+}
+div.divLogin{width: 445px; margin-left: auto; margin-right: auto; height: 265px;}
+
+/* Elemento ancho 5% */
+.ancho5 { width: 5%; }
+/* Elemento ancho 10% */
+.ancho10 { width: 10%; }
+/* Elemento ancho 20% */
+.ancho20 { width: 20%; }
+/* Elemento ancho 25% */
+.ancho25 { width: 25%; }
+/* Elemento ancho 30% */
+.ancho30 { width: 30%; }
+/* Elemento ancho 33% */
+.ancho33 { width: 33%; }
+/* Elemento ancho 40% */
+.ancho40 { width: 40%; }
+/* Elemento ancho 50% */
+.ancho50 { width: 50%; }
+/* Elemento ancho 60% */
+.ancho60 { width: 60%; }
+/* Elemento ancho 70% */
+.ancho70 { width: 70%; }
+/* Elemento ancho 75% */
+.ancho75 { width: 75%; }
+/* Elemento ancho 80% */
+.ancho80 { width: 80%; }
+/* Elemento ancho 90% */
+.ancho90 { width: 90%; }
+/* Elemento ancho 100% */
+.ancho100 { width: 100%; }
+/* ------------------------------------ Fin Estilos ayuda a construccion de tablas  ------------------------------------ */
+
+
+/* ------------------------------ Estilos comunes para errores ------------------------*/
+.error { font-size: 110%; color: #cc0000;background: inherit;}
+/* ------------------------------ Fin estilos comunes para errores ------------------------*/
+
+/* ---------------------------------- Para diferenciar la zona del pie y del cuerpo y centrar la informacion -------------------------------*/
+.contenedor750{ margin: 0 auto; width: 750px; position:relative; background-color: inherit; color:inherit;}
+html.cuerpoPie, body.cuerpoPie {height: 98%;}
+.cuerpo { min-height: 95%; height: auto !important;  height: 95%; margin: 0 auto 1%; }
+.pie{ height: 1%; }
+/* ---------------------------------- Fin para diferenciar la zona del pie y del cuerpo y centrar la informacion -------------------------------*/
+
+/* --------------------------------- Fin estilos generales a todo el portal -------------------------------------------------*/
+
+/* ------------------------ Estilos comunes para el calendario -------------------------*/
+/*.cCalActivo:visited{color: #FFFFFF;}*/
+.dCalendario{padding-left: 3pt;padding-right: 0pt;padding-top: 3pt;padding-bottom: 3pt;width: 125pt;}
+.cCalContorno{background-color: #4567a6; color: #ffffff}
+.cCalCentrar{text-align: center;}
+.dCalTitulo1{font-size: 0.9em;color: #000000;background-color: #FFFFFF;font-weight: bold;padding-top: 1pt;padding-bottom: 1pt;}
+.cCalFestivo{background-color: #CCCCCC;font-size: 0.9em;color: #000000;text-decoration: none;width: 18pt;height: 10pt;text-align: center;}
+.cCalNormal{background-color: #FFFFFF;font-size: 0.9em;color: #000000;text-decoration: none;width: 18pt;height: 10pt;text-align: center;}
+.cCalActivo{background-color: #7E2B42;font-size: 0.9em;color: #FFFFFF;text-decoration: none;height: 10pt;text-align: center;}
+.cCalActivo:hover{background-color: #7E2B42;font-size: 0.9em;color: #FFFFFF;text-decoration: underline;height: 10pt;text-align: center;}
+.cCalActivo:link{background-color: #7E2B42;font-size: 0.9em;color: #FFFFFF;text-decoration: none;height: 10pt;text-align: center;}
+.cCalNavegador{font-size: 0.9em;color: #000000;background-color: #FFFFFF;text-align: center;}
+.dCalTexto{font-size: 0.9em;color: #000000;background-color: #FFFFFF;padding-top: 3pt;padding-bottom: 1pt;}
+.dCalEvento{font-size: 0.8em;color: #000000;background-color: #FFFFFF;padding-left: 3pt;padding-top: 0pt;padding-bottom: 3pt;}
+.dCalVinculo{color: #A00000;background-color: #FFFFFF;text-decoration: none;font-size: 0.9em;}
+.dCalVinculo:hover{color: #7E2B42;background-color: #FFFFFF;text-decoration: underline;font-size: 0.9em;}
+.dCalVinculo:link{color: #7E2B42;background-color: #FFFFFF;text-decoration: none;font-size: 0.9em;}
+.dCalVinculo:visited{color: #7E2B42;background-color: #FFFFFF;}
+.dCalLinea{text-align: center;color: #FFFFFF;background-color: #000000;width: 50%;font-size: 1pt;z-index: 5;}
+.dCalImgcentrada{text-align: center;}
+/* ------------------------ Fin estilos comunes para el calendario -------------------------*/
+
+/* ------------------------ Estilos para formularios -------------------------*/
+
+/* FORMULARIOS */
+select.frmValorCampo { color:#000000; background:#FFFFFF;} 
+.frmValorCampo {color:#000000; background:inherit;}
+.frmEtiquetaCampo {color:#666666; background:inherit;font-weight: bold}
+.frmCabeceraFormulario {color:#7692c6; background:inherit;font-weight: bold}
+/* FIN FORMULARIOS */
+
+
+/* TEXTOS LOGIN */
+/*.pie {COLOR: #ffffff;background-color: #4567a6; font-weight:bold; text-align: right;} 
+.texto {COLOR: #000000;background-color: #EFF2F7; font-weight:bold; text-align: right;} 
+.titulo {COLOR: #000000;background-color: #EFF2F7; font-weight:bold; text-align: center;} 
+.ErrorText {color: #CC0000;background-color: #EFF2F7; text-align: center;} */
+/* FIN TEXTOS LOGIN */
+/* ------------------------ Fin estilos para formularios -------------------------*/
+
+/* ------------------- Estilos para simular fondo de un mensaje ------------------- */
+div.franjaSuperior, div.franjaInferior{display:block;background: inherit; color:inherit; font-size:0px;} 
+div.franjaSuperior span, div.franjaInferior span{display:block;height: 1px; /*overflow:hidden; */ /*color:inherit; */ font-size:0px;} 
+span.margen1{margin: 0px 5px; font-size:0px;}
+span.margen2{margin: 0px 3px; font-size:0px;}
+span.margen3{margin: 0px 2px; font-size:0px;}
+div.franjaSuperior span.margen4, span.franjaSuperior span.margen4{margin: 0 1px;height: 2px; font-size:0px;}
+
+/* ------------------- Fin estilos para simular fondo de un mensaje ------------------- */
+
+/*----------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+/*---------------------------------- ESTILOS ESPECIFICOS POR APLICACION ------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+
+/* --------------------------- Sobreescritos estilos de html por aplicacion ------------------------- */
+h1{ color: #4567a6;  font-size:1.4em; background: inherit;  line-height:1.1em; font-weight:bold; margin:5px 0px 10px 0px ;}  
+h2{ color: #666666; font-size: 1.1em; background: inherit;  font-weight:bold; margin:5px 0px 10px 0px;}
+
+a:link {text-decoration: none; color: #4567a6; background-color:inherit;}
+a:visited {text-decoration: none;color: #4567a6; background-color:inherit;}
+a:visited:hover {text-decoration:underline; }
+a:hover {text-decoration: underline; }  
+
+li {list-style-type: none;list-style-image: url(/img/estilos/vinieta.gif);}
+/* ----------------------------- Fin sobreescritos estilos de html por aplicacion ------------------ */
+
+
+/* ----------------------------- Barra de navegacion  por aplicacion --------------------------------*/
+div.nav{width:175px; clear:both;} 
+ul.nav{ margin:0px 0px 0px 0px; padding:0px 0px 0px 15px }
+/*li.nav {margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;list-style-type: none;list-style-image: url(/img/estilos/nav_vinieta.gif);} */
+li.nav {margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;list-style-type: none;list-style-image: url(/img/estilos/nav_vinieta.gif);}
+a.empleado {font-size:0.9em;color:#4567a6;background-color:inherit;line-height:1.5em;}
+a:hover.empleado{font-size:0.9em;color:#4567a6;background-color:inherit;line-height:1.5em;text-decoration:underline}
+/* -------------------------- Fin barra de navegacion por aplicacion --------------------------------*/
+
+/* ------------------- Estilos para simular fondo azul oscuro redondeado, para pestanas ------------------- */
+div.redondeado{ margin: 0 ;background: #4567A6; padding: 0px 0px 0px 0px; color:inherit;}
+span.rtop, span.rbottom{display:block;background: #FFF; color:inherit; font-size:0px;} 
+span.rtop span, span.rbottom span{display:block;height: 1px; /*overflow:hidden;*/ background: #4567A6; color:inherit; font-size:0px;} 
+span.r1{margin: 0px 5px; font-size:0px;}
+span.r2{margin: 0px 3px; font-size:0px;}
+span.r3{margin: 0px 2px; font-size:0px;}
+span.rtop span.r4, span.rbottom span.r4{margin: 0 1px;height: 2px; font-size:0px;}
+
+.texto_rotulo {  padding-left: 5px;padding-right: 5px;font-size: 11px; color: #FFFFFF; font-weight: bold; line-height:1.5em; background-color: inherit;}
+a:hover.texto_rotulo {  padding-left: 5px;padding-right: 5px;font-size: 11px; color: #FFFFFF; font-weight: bold; line-height:1.5em;text-decoration: none; background-color: inherit;}
+a:link.texto_rotulo {  padding-left: 5px;padding-right: 5px;font-size: 11px; color: #FFFFFF; font-weight: bold; line-height:1.5em;text-decoration: none; background-color: inherit;}
+a:visited.texto_rotulo {  padding-left: 5px;padding-right: 5px;font-size: 11px; color: #FFFFFF; font-weight: bold; line-height:1.5em;text-decoration: none; background-color: inherit;}
+/* ----------------- Fin Estilos para simular fondo azul oscuro redondeado, para pestanas ------------------- */
+
+/* ------------------- Estilos para menus ------------------- */
+ul.menuSup{ padding: 0.2em 0em 0.2em 3em; margin: 0em 0em 0em 0em; background: #F2F2F2; color: #4567a6;  font-weight: bold; line-height: 1.3em; border-bottom:1px solid #4567a6; border-top:1px solid #4567a6;} 
+li.menuSupActivo, li.menuSupInactivo { padding: 0.2em 0em; margin-left: 0em; margin-right: 1em; list-style: none; display: inline; }   
+li.menuSupActivo a, li.menuSupInactivo a{ color:#4567a6; background:inherit; }    
+
+li.menu1Activo a, li.nivel2Activo a,  li.nivel3Activo a, li.nivel4Activo a, li.nivel1_800Activo a, li.nivel2_800Activo a{ color: #4567a6; background: inherit;}  
+li.menu1Activo a:visited, li.nivel2Activo a:visited {background: inherit; color:#6C0556; text-decoration:none; }
+li.menu1Activo a:visited:hover, li.nivel2Activo a:visited:hover, li.nivel3Activo a:visited:hover, li.nivel4Activo a:visited:hover, li.nivel1_800Activo a:visited:hover, li.nivel2_800Activo a:visited:hover {text-decoration:underline; }
+li.menu1Activo a:hover, li.nivel2Activo a:hover, li.nivel3Activo a:hover, li.nivel4Activo a:hover, li.nivel1_800Activo a:hover, li.nivel2_800Activo a:hover {text-decoration:underline; }
+
+li.menu1Inactivo a, li.nivel2Inactivo a,  li.nivel3Inactivo a, li.nivel4Inactivo a, li.nivel2_800Inactivo a{ color: #4567a6; background: inherit;}  
+li.menu1Inactivo a:visited, li.nivel2Inactivo a:visited, li.nivel3Inactivo a:visited, li.nivel4Inactivo a:visited, li.nivel2_800Inactivo a:visited  {background: inherit; color:#6C0556; text-decoration:none; }
+li.menu1Inactivo a:visited:hover, li.nivel2Inactivo a:visited:hover, li.nivel3Inactivo a:visited:hover, li.nivel4Inactivo a:visited:hover, li.nivel1_800Inactivo a:visited:hover, li.nivel2_800Inactivo a:visited:hover  {text-decoration:underline; }
+li.menu1Inactivo a:hover, li.nivel2Inactivo a:hover, li.nivel3Inactivo a:hover, li.nivel4Inactivo a:hover, li.nivel1_800Inactivo a:hover, li.nivel2_800Inactivo a:hover {text-decoration:underline; }
+
+
+li.menu1Activo a, li.nivel2Activo a{ background:#EFF3F7;  color:inherit;} 
+ul.menu1{ margin:0em 0em 0em 0em; padding:0.2em 0em 0.2em 1.5em}
+li.menu1Activo {margin:0.5em 0em 0em 0em;padding:0.3em 0em 0.3em 0em;list-style-type: none;list-style-image: url(/img/estilos/nav_vinieta.gif); background:#EFF3F7;  color:#4567a6; } 
+li.menu1Inactivo {margin:0.5em 0em 0em 0em;padding:0.3em 0em 0.3em 0em;list-style-type: none;list-style-image: url(/img/estilos/nav_vinieta.gif); background:inherit;  color:#4567a6; }
+
+.nivel1 {margin:0.6em 0em 0em 0em; padding:0.2em 0em 0.2em 0.3em;list-style-type: none; font-weight:bold; background:#4567a6; color:#ffffff;}
+.nivel1 a{ font-weight:bold; background:#4567a6; color:#ffffff;}
+
+ul.nivel2{ margin:0em 0em 0em 0em; padding:0.2em 0em 0.2em 1.5em; /*word-wrap: break-word; overflow:hidden;*/ } 
+li.nivel2Activo {margin:0em 0em 0em 0em;padding:0.1em 0em 0.1em 0em;list-style-type: none;list-style-image: url(/img/estilos/nav_vinieta.gif); background:#EFF3F7;  color:#4567a6; }
+li.nivel2Inactivo {margin:0em 0em 0em 0em;padding:0.1em 0em 0.1em 0em;list-style-type: none;list-style-image: url(/img/estilos/nav_vinieta.gif); background:inherit;  color:#4567a6; }
+
+ul.nivel3{ padding: 0px 0px 0px 0px; margin-left: 0px; margin-top:0px; margin-bottom: 0px; border-bottom: 2px solid #4567a6; } 
+li.nivel3Activo      { line-height: 20px; padding: 3px 2px 3px 2px;  margin-left: 0px; list-style: none; display: inline; border: 2px solid #4567a6; color:#4567a6; background: inherit; border-bottom:2px solid #ffffff; font-weight:bold; margin-left: 3px; } 
+li.nivel3Inactivo      { line-height: 20px; padding: 3px 2px 3px 2px;  list-style: none; display: inline; border: 1px solid #4567a6; color:#4567a6; background: #EFF3F7; border-bottom:0px;  margin-left: 3px; } 
+li.nivel3Deshabilitado      { line-height: 20px; padding: 3px 2px 3px 2px;  list-style: none; display: inline; border: 1px dotted #666666; color:#666666; background: #F9F9F9; border-bottom:0px; margin-left: 3px; } 
+
+ul.nivel4{ padding: 0.2em 0em; margin: 0.1em 0em 0em 0em; background: #F0F0F0; color: #4567a6; } 
+li.nivel4Activo { padding: 0.2em 0em; margin-left: 0em; margin-right: 1em; list-style: none; display: inline; line-height: 1.3em; font-weight: bold; }   
+li.nivel4Inactivo { padding: 0.2em 0em; margin-left: 0em; margin-right: 1em; list-style: none; display: inline; line-height: 1.3em; } 
+li.nivel4Inactivo a{ font-size: 0.9em;}
+li.nivel4Activo a{ font-size: 0.9em;}  
+
+.datosEnmarcados{ border: 2px solid #4567a6; border-top:0px; margin-top: 0px;} 
+
+ul.nivel1_800{ padding: 0.5em 0em 0.3em 3em; margin: 0em 0em 0em 0em; color: #333333;  font-weight: bold; line-height: 1.3em; border-bottom:2px solid #4567a6; border-top:2px solid #4567a6; background:#AFC0DE; }
+li.nivel1_800Activo{ padding: 0em 0.2em 0.2em 0.2em; margin-left: 0em; margin-right: 1em; list-style: none; display: inline; color:#4567a6; border-bottom:3px solid #FFFFFF; border-left: 2px solid #4567a6; border-right: 2px solid #4567a6; border-top: 2px solid #4567a6; font-size: 1.2em; background: #FFFFFF; }
+li.nivel1_800Inactivo { padding: 0.2em 0em 0em 0em; margin-left: 0em; margin-right: 1em; list-style: none; display: inline; font-size: 1.1em; }   
+li.nivel1_800Activo a{ border-bottom:1px solid #FFFFFF; font-size: inherit; } 
+li.nivel1_800Inactivo a, li.nivel1_800Inactivo a:visited{ color:#333333; background:inherit; font-size: inherit; }    
+
+ul.nivel2_800{ padding: 0.3em 0em 0.3em 3em; margin: 0em 0em 0em 0em; color: #4567a6;  line-height: 1.3em; border-bottom: 2px solid #4567a6; } 
+li.nivel2_800Inactivo{ padding: 0.2em 0em 0em 0em; display: inline; margin-left: 0em; margin-right: 1em; list-style: none; display: inline; }   
+li.nivel2_800Activo{ padding: 0.2em 0em 0em 0em; display: inline; margin-left: 0em; margin-right: 1em; list-style: none; display: inline; font-weight: bold; }   
+li.nivel2_800Activo a{ font-weight: bold; }    
+
+/* ------------------- Fin estilos para menus ------------------- */
+
+/* --------------------------------- Estilos con el color por aplicacion -------------------------------------------------*/
+/* Boton azul*/
+.boton {  border-left:1px solid #EFF3F7; border-right:1px solid #EFF3F7; border-top:1px solid #4567a6; border-bottom:1px solid #4567a6; background-color: #EFF3F7; font-weight: bold; text-align: center; color: #4567a6; }
+/* Boton blanco para paginas con fondo*/
+.botonBlanco{  border-left:1px solid #EFF3F7; border-right:1px solid #EFF3F7; border-top:1px solid #4567a6; border-bottom:1px solid #4567a6; background-color: #FFFFFF; font-weight: bold; text-align: center; color: #4567a6; }
+
+/* Enlaces azules, que heredan el color de la celda o campo donde se situen */
+a.enlaceApl1 {color:#4567a6;background:inherit;}
+a.enlaceApl1:hover {text-decoration:underline} 
+a.enlaceApl1:visited {color:#6C0556;background:inherit;text-decoration:none} 
+a.enlaceApl1:visited:hover {text-decoration:underline} 
+
+/* Elemento para texto azul, el mas oscuro */
+.textoApl1{background: inherit;  color: #4567a6;}
+/* Elemento para texto azul, el siguiente mas claro */
+.textoApl2{background: inherit;  color: #AFC0DE;} 
+/* Elemento para texto azul, el siguiente mas claro */
+.textoApl3{background: inherit;  color: #EFF3F7;}
+
+.fondoApl1,.fondoApl1 a:link,.fondoApl1 a:visited,a:link.fondoApl1, a:visited.fondoApl1{background-color: #4567a6;  color: #FFFFFF;}
+/* Elemento para fondo azul, el siguiente mas oscuro */
+.fondoApl2,.fondoApl2 a:link, .fondoApl2 a:visited,a:link.fondoApl2,a:visited.fondoApl2{ background-color: #AFC0DE;color: #FFFFFF;}
+/* Elemento para fondo azul, el siguiente mas oscuro  */
+.fondoApl3{background-color: #EFF3F7;color: #000000;}
+
+/* Elemento que simula el borde del color mas oscuro*/
+.borde1SolidoApl1{	border: 1px solid #4567a6; }
+/* Elemento que simula el borde del color siguiente mas claro*/
+.borde1SolidoApl2{	border: 1px solid #AFC0DE; }
+
+/* Subrayado de un pixel del color mas oscuro */
+.subrayado1SolidoApl1{ border-bottom:1px solid #4567a6; }
+/* Subrayado de un pixel del color siguiente mas claro */
+.subrayado1SolidoApl2{ border-bottom:1px solid #AFC0DE; }
+
+/*========================================*/
+/* Definición de la cabecera de la página */
+/*========================================*/
+.cabeceraLogo{background: #1E3F71 url('https://servicios.aragon.es/img/estilos/logoInternet.jpg') no-repeat 0px 0px; color: inherit; } 
+.cabeceraLogo h1 {background: #1E3F71 none no-repeat 0px 0px; color:#FFFFFF; }   
+
+/*=============================================================*/
+/* Definición de los logos de la dga en los distintos fondos de la apl */
+/*============================================================*/
+
+.logoApl1{ background-image: url(/img/estilos/logoDgaFondoApl1.gif); background-repeat: no-repeat; background-position: 1em; height: 36px; }
+.logoApl2{ background-image: url(/img/estilos/logoDgaFondoApl2.gif); background-repeat: no-repeat; background-position: 1em /*center*/; height: 36px; }
+.logoApl3{ background-image: url(/img/estilos/logoDgaFondoApl3.gif); background-repeat: no-repeat; background-position: 1em; height: 36px; }
+
+/* --------------------------------- Fin estilos con el color por aplicacion -------------------------------------------------*/
+
